@@ -6,7 +6,7 @@ export function removeTool(tool) {
 
 export function confirmRemoveTool(tool) {
     return dispatch => {
-        api.delete(`/tools/${tool.id}`)
+        api.delete(`/tools/${tool._id}`)
             .then(resp => {
                 dispatch({ type: 'REMOVE_TOOL_CONFIRMATION', payload: tool.id })
             })

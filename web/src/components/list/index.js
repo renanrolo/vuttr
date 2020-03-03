@@ -37,7 +37,8 @@ class List extends Component {
         toolsFiltered = toolsFiltered.filter(e =>
             (
                 !this.props.searchInTagsOnly
-                && e.description.toLowerCase().indexOf(search.toLowerCase()) >= 0
+                && (e.description.toLowerCase().indexOf(search.toLowerCase()) >= 0
+                || e.title.toLowerCase().indexOf(search.toLowerCase()) >= 0)
             )
             || (
                 e.tags.map(tag => {
