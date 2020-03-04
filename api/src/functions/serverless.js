@@ -3,7 +3,7 @@ const serverless = require('serverless-http');
 const app = express();
 const bodyParser = require('body-parser');
 const router = express.Router();
-const toolsController = require('./src/controllers/toolsController')
+const toolsController = require('../controllers/toolsController')
 
 const mongoConnectionString = process.env.mongocs;
 mongoose.connect(mongoConnectionString,

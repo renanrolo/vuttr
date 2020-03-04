@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node serverless.js",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "netlify-lambda build functions"
+    "build": "netlify-lambda build src/functions",
+    "postinstall": "netlify-lambda install"
   },
   "author": "Renan Rolo",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mongoose": "^5.9.2",
+    "netlify-lambda": "^1.6.3",
     "nodemon": "^2.0.2",
     "serverless-http": "^2.3.2"
   }
